@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about', as: 'about'
 
   # Resources route
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 end
