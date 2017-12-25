@@ -31,16 +31,19 @@
           <li><%= link_to"Create Post", new_post_path %></li>
         </ul>
         <form class="navbar-form navbar-right">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-success">Submit</button>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-success" type="button">Go!</button>
+            </span>
+          </div><!-- /input-group -->
         </form>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
     </nav>
-
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' %>
   </body>
 </html>
